@@ -1,14 +1,14 @@
-Reactor.js
+Elementary
 ==========
 
-Reactor.js is a simple reactive front-end library. It provides 
+Elementary is a simple reactive front-end library. It provides 
 - `Reactor` objects that store reactive variables
 - `Observer` functions that automatically track the reactive variables that they use and retrigger if any of these variables are updated. The function `ob` is shorthand for `new Observer`
 - A function `el` that allows declarative element creation in javascript
 
-Here's a quick example of what Reactor does:
+Here's a quick example of what Elementary does:
 ```javascript
-import { Reactor, ob, el } from 'reactorjs'
+import { Reactor, ob, el } from '@fynyky/elementary'
 
 const rx = new Reactor({
   name: 'Anakin' 
@@ -45,19 +45,19 @@ rx.name = 'Darth'
   - Function return values are appended as children
   - `Observer` functions automatically replace their child nodes when retriggered
 
-Reactor.js is meant to be unobtrusive and unopinionated. 
+Elementary is meant to be unobtrusive and unopinionated. 
 - No special syntax to learn. Everything is just plain javascript
-- There is no need to manually declare listeners or bindings. Reactor automatically keeps track of all that for you. 
-- Use it for the whole front-end or just a few components. Elements created by Reactor are just normal DOM elements, and any variable can be easily replaced with a reactive one without changing the rest of your codebase.
+- There is no need to manually declare listeners or bindings. Elementary automatically keeps track of all that for you. 
+- Use it for the whole front-end or just a few components. Elements created by Elementary are just normal DOM elements, and any variable can be easily replaced with a reactive one without changing the rest of your codebase.
 
 You try it yourself in a JSFiddle [here](https://jsfiddle.net/0voez9qn/)
 
 Installation
 ------------
 
-Reactor.js is [available on npm](https://npmjs.org/package/reactorjs). Install it by running:
+Elementary is [available on npm](https://npmjs.org/package/@fynyky/elementary). Install it by running:
 ```
-$ npm install reactorjs
+$ npm install @fynyky/elementary
 ```
 
 Import it using:
@@ -72,12 +72,12 @@ import  {
   hide,
   batch,
   shuck
-}  from 'reactorjs'
+}  from '@fynyky/elementary'
 ```
 
 It is also available directly from [unpkg](unpkg.com). You can import it in javascript using
 ```javascript
-import { el, attr, bind, ob, Reactor, Observer, hide, batch, shuck } from 'https://unpkg.com/reactorjs'
+import { el, attr, bind, ob, Reactor, Observer, hide, batch, shuck } from 'https://unpkg.com/@fynyky/elementary'
 ```
 
 
@@ -262,8 +262,7 @@ somePromise.resolve('resolved!')
 ```
 --------------------------------------------------------------------------------
 
-`Observer` functions from Reactor.js are handled very similarly to functions. They are executed in the context of the parent. However they also leave a
-set of comments bookmarking the children they produce.
+`Observer` functions from Elementary are handled very similarly to functions. They are executed in the context of the parent. However they also leave a set of comments bookmarking the children they produce.
 
 ```javascript
 const rx = new Reactor({ name: 'foo' })
@@ -666,7 +665,7 @@ Summary
 import { 
   el, attr, bind, ob,
   Reactor, Observer, hide, batch, shuck 
-} from 'reactorjs'
+} from '@fynyky/elementary'
 
 // el(description, children...)
 el('h1') // Creates a h1 element with a class "h1"
@@ -843,3 +842,5 @@ Tests are stored in `test.js` to be run using Mocha.
 Run `npm install` to install the the dev dependencies.
 
 To run the tests run `npm test`.
+
+To run the tests in a browser environment run `npm run browserTest` and open the test page.
