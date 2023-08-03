@@ -1,7 +1,7 @@
 {
-  "name": "reactorjs",
-  "version": "2.1.2",
-  "description": "Simple reactive programming without frameworks",
+  "name": "@fynyky/elementary",
+  "version": "1.0.0",
+  "description": "Simple reactive front-end library",
   "source": "src/index.js",
   "main": "dist/index.js",
   "targets": {
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fynyky/reactor.js.git"
+    "url": "git+https://github.com/fynyky/elementary.git"
   },
   "keywords": [
     "reactive"
@@ -38,9 +38,9 @@
   "author": "Hongyi Li",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fynyky/reactor.js/issues"
+    "url": "https://github.com/fynyky/elementary/issues"
   },
-  "homepage": "https://github.com/fynyky/reactor.js#readme",
+  "homepage": "https://github.com/fynyky/elementary#readme",
   "type": "module",
   "dependencies": {
     "weak-ref-collections": "^1.2.3"
