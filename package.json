@@ -2,6 +2,7 @@
   "name": "@fynyky/elementary",
   "version": "1.0.0",
   "description": "Simple reactive front-end library",
+  "type": "module",
   "source": "src/index.js",
   "main": "dist/index.js",
   "targets": {
@@ -14,16 +15,19 @@
   "files": [
     "dist/index.*"
   ],
+  "dependencies": {
+    "weak-ref-collections": "^1.2.4"
+  },
   "devDependencies": {
-    "mocha": "^10.1.0",
-    "parcel": "^2.8.1",
-    "standard": "^17.0.0"
+    "mocha": "^10.2.0",
+    "parcel": "^2.9.3",
+    "standard": "^17.1.0"
   },
   "scripts": {
     "lint": "standard --fix",
     "build": "rm -rf dist/ && parcel build",
-    "prepare": "npm run build",
-    "pretest": "npm run build",
+    "prepare": "rm -rf dist/ && parcel build",
+    "pretest": "rm -rf dist/ && parcel build",
     "test": "standard && mocha test/reactor.test.js",
     "browserTest": "npm run pretest && parcel serve test/elementary.test.html",
     "prepublishOnly": "npm test"
@@ -33,16 +37,14 @@
     "url": "git+https://github.com/fynyky/elementary.git"
   },
   "keywords": [
-    "reactive"
+    "reactive",
+    "ui",
+    "front-end"
   ],
-  "author": "Hongyi Li",
+  "author": "Li Hongyi",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fynyky/elementary/issues"
   },
-  "homepage": "https://github.com/fynyky/elementary#readme",
-  "type": "module",
-  "dependencies": {
-    "weak-ref-collections": "^1.2.3"
-  }
+  "homepage": "https://github.com/fynyky/elementary#readme"
 }
