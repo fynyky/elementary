@@ -16,8 +16,7 @@
     "dist/index.*"
   ],
   "dependencies": {
-    "reactorjs": "^2.1.1",
-    "weak-ref-collections": "^1.2.4"
+    "reactorjs": "^2.1.1"
   },
   "devDependencies": {
     "mocha": "^10.2.0",

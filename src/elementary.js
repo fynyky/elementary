@@ -14,7 +14,7 @@
 // replacing the previous iterations if any. Attached Observers are also
 // automatically disabled when their parent element is removed from the DOM.
 
-import { Reactor, Observer, shuck, hide, batch } from 'reactorjs'
+import { Observer, shuck } from 'reactorjs'
 
 // Manually compiled list of valid HTML tags. Used when creating a new `el`
 // If the string matches a named tag it will create that element
@@ -306,9 +306,4 @@ export {
   ob,
   attr,
   bind,
-  Reactor,
-  Observer,
-  shuck,
-  hide,
-  batch
 }
