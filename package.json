@@ -1,0 +1,48 @@
+{
+  "name": "@fynyky/elementary",
+  "version": "1.0.0",
+  "description": "Simple reactive front-end library",
+  "type": "module",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "targets": {
+    "main": {
+      "context": "browser",
+      "includeNodeModules": true,
+      "optimize": true
+    }
+  },
+  "files": [
+    "dist/index.*"
+  ],
+  "dependencies": {
+    "reactorjs": "^2.1.1"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "parcel": "^2.8.1",
+    "standard": "^17.1.0"
+  },
+  "scripts": {
+    "lint": "standard --fix",
+    "build": "rm -rf dist/ && parcel build",
+    "prepare": "npm run build",
+    "test": "standard",
+    "browserTest": "parcel serve test/elementary.test.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fynyky/elementary.git"
+  },
+  "keywords": [
+    "reactive",
+    "ui",
+    "front-end"
+  ],
+  "author": "Li Hongyi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fynyky/elementary/issues"
+  },
+  "homepage": "https://github.com/fynyky/elementary#readme"
+}
