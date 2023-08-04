@@ -26,6 +26,7 @@
   "scripts": {
     "lint": "standard --fix",
     "build": "rm -rf dist/ && parcel build",
+    "prepare": "npm run build",
     "test": "standard",
     "browserTest": "parcel serve test/elementary.test.html"
   },
