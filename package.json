@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "mocha": "^10.2.0",
-    "parcel": "^2.9.3",
+    "parcel": "^2.8.1",
     "standard": "^17.1.0"
   },
   "scripts": {
