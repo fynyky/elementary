@@ -305,5 +305,5 @@ export {
   el,
   ob,
   attr,
-  bind,
+  bind
 }
