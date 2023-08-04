@@ -1,6 +1,6 @@
 /* eslint-env mocha */
 /* global assert */
-import { el, attr, bind, Observer, Reactor } from '../dist/index.js'
+import { el, attr, bind, Observer, Reactor } from '../src/index.js'
 
 const ob = (x) => new Observer(x)
 
