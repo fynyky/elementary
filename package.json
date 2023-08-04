@@ -16,6 +16,7 @@
     "dist/index.*"
   ],
   "dependencies": {
+    "reactorjs": "^2.1.1",
     "weak-ref-collections": "^1.2.4"
   },
   "devDependencies": {
@@ -26,10 +27,9 @@
   "scripts": {
     "lint": "standard --fix",
     "build": "rm -rf dist/ && parcel build",
-    "prepare": "rm -rf dist/ && parcel build",
-    "pretest": "rm -rf dist/ && parcel build",
-    "test": "standard && mocha test/reactor.test.js",
-    "browserTest": "npm run pretest && parcel serve test/elementary.test.html",
+    "prepare": "npm run build",
+    "test": "standard",
+    "browserTest": "parcel serve test/elementary.test.html",
     "prepublishOnly": "npm test"
   },
   "repository": {
